@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MastersApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+   <!-- <link rel="stylesheet"
+
+    href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css"> -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+
+  <!-- <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script> -->
+
+  <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.2/angular-materialize.min.js"></script> -->
+
+
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+
+  <script src="js/app.js"></script>
+  <script src="js/controllers/lunchMenu.controller.js"></script>
+
+  <link type="text/css" rel="stylesheet" href="css/home-styles.css" />
+  <link type="text/css" rel="stylesheet" href="css/lunch-style.css" />
+  <link type="text/css" rel="stylesheet" href="css/menu-style.css" />
+
+  <title>James Colairo</title>
+</head>
+<body>
+
+  <div id="bg"></div>
+  <section>
+    <nav>
+      <div></div>
+      <ul>
+        <li data-xcoord="0px" ui-sref="home"><a>Home</a></li>
+        <li data-xcoord="160px" ui-sref="menu"><a>Menu</a></li>
+        <li data-xcoord="320px" ui-sref="about"><a>About</a></li>
+        <li data-xcoord="480px" ui-sref="contact"><a>Contact</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <div ui-view>
+
+  </div>
+</body>
+</html>

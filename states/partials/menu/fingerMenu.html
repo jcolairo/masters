@@ -1,0 +1,12 @@
+<h1>Finger Menu</h1>
+
+<section ng-controller="LunchMenuController as menu">
+  <ul ng-repeat="m in menu.fingerMenuData" class="LunchMenu">
+    <li>
+      <h4>{{m.title}} {{m.price}} + VAT</h4>
+    </li>
+    <li ng-repeat="men in m.description">
+      {{men}}
+    </li>
+  </ul>
+</section>

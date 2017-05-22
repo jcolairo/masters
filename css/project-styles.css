@@ -1,0 +1,10 @@
+.container-container {
+  /*display: inline-flex;*/
+}
+.container-container-container {
+  background-color: #E8E8E8;
+  margin: 1rem;
+  position: left;
+  border: 2px solid black;
+  /*border-radius: 50%;*/
+}

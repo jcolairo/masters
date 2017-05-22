@@ -1,0 +1,61 @@
+h4 {
+  font-size: 2.5rem;
+}
+.row {
+  width: 100%;
+}
+.lunchMenuDiv {
+  background-color: rgba(204, 204, 204, 0.7);
+  height: 17rem;
+  width: 100%;
+  margin: auto auto;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lunchMenu {
+  color: yellow;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu1 {
+  background: url(../images/coffee-machine.png) center center no-repeat;
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.menu2 {
+  background: url(../images/shop-background.png) center center no-repeat;
+  height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.menu3 {
+  background: url(../images/oven.png) center center no-repeat;
+  height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.menu4 {
+  background: url(../images/bruschetta.png) center center no-repeat;
+  height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.menu5 {
+  background: url(../images/roast-beef.png) center center no-repeat;
+  height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.menu6 {
+  background: url(../images/tricolore.png) center center no-repeat;
+  height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+}
