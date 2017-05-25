@@ -3,7 +3,13 @@ function LunchMenuFactory($http) {
     getAll: function() {
       return $http({
         method: 'GET',
-        url: ''
+        url: '/api/names'
+      });
+    },
+    getAllMenus: function() {
+      return $http({
+        method: 'GET',
+        url: '/api/menus'
       });
     }
   };

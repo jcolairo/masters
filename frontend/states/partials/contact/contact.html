@@ -1,1 +1,18 @@
 <h1>Contact</h1>
+
+<div ng-controller="LunchMenuController as lunchMenu">
+  <div ng-init="lunchMenu.getNames()">
+    <ul ng-repeat="name in lunchMenu.names">
+      <li>
+        {{name}}
+      </li>
+    </ul>
+  </div>
+  <div ng-init="lunchMenu.getMenus()">
+    <ul ng-repeat="menu in lunchMenu.menu">
+      <li>
+        {{menu}}
+      </li>
+    </ul>
+  </div>
+</div>

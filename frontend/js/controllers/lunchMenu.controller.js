@@ -1,5 +1,30 @@
-function LunchMenuController() {
+function LunchMenuController(LunchMenuFactory) {
   var controller = this;
+
+
+  controller.getNames = function() {
+    LunchMenuFactory.getAll().then( function(success) {
+      console.log('got names:', success);
+      controller.names = success.data;
+    },
+      function(error) {
+        console.warn('could not get names:', error);
+      });
+  };
+
+
+
+  controller.getMenus = function() {
+    LunchMenuFactory.getAllMenus().then( function(success) {
+      console.log('got menu:', success);
+      controller.menu = success.data;
+
+    },
+      function(error) {
+        console.warn('could not get menu:', error);
+      });
+  };
+
 
   controller.setLunchMenuData = [
     {
@@ -289,10 +314,12 @@ function LunchMenuController() {
       description: [
         '300ml'
       ]
-    },
+    }
   ];
 
 }
+
+LunchMenuController.$inject = ['LunchMenuFactory'];
 
 angular
   .module('MastersApp')
