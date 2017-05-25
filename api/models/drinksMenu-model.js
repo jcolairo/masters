@@ -6,13 +6,15 @@ var validationRules = {
   },
   price: {
     type: String
-  }
+  },
+  description: [
+    String
+  ]
 };
-var MenuSchema = new Schema(validationRules);
-var Menu = mongoose.model('Menu', MenuSchema);
+var drinksMenuSchema = new Schema(validationRules);
+var drinksMenu = mongoose.model('drinksMenu', drinksMenuSchema);
 
 // var x = new Menu({title: "Niall's Menu", price: "1.99"})
 // x.save();
 
-
-module.exports = Menu;
+module.exports = drinksMenu;
