@@ -5,7 +5,7 @@
   <div ng-init="lunchMenu.getSetLunchMenus()">
     <ul ng-repeat="menu in lunchMenu.setLunchMenus">
       <li>
-        {{menu.title}}
+        <h5>{{menu.title}}</h5>
         {{menu.price}}
       </li>
       <li ng-repeat="men in menu.description">
@@ -17,7 +17,7 @@
   <div ng-init="lunchMenu.getFingerMenus()">
     <ul ng-repeat="menu in lunchMenu.fingerMenus">
       <li>
-        {{menu.title}}
+        <h5>{{menu.title}}</h5>
         {{menu.price}}
       </li>
       <li ng-repeat="men in menu.description">
@@ -29,7 +29,7 @@
   <div ng-init="lunchMenu.getColdForkMenus()">
     <ul ng-repeat="menu in lunchMenu.coldForkMenus">
       <li>
-        {{menu.title}}
+        <h5>{{menu.title}}</h5>
         {{menu.price}}
       </li>
       <li ng-repeat="men in menu.description">
@@ -41,7 +41,7 @@
   <div ng-init="lunchMenu.getHotForkMenus()">
     <ul ng-repeat="menu in lunchMenu.getHotForkMenus">
       <li>
-        {{menu.title}}
+        <h5>{{menu.title}}</h5>
         {{menu.price}}
       </li>
       <li ng-repeat="men in menu.description">
@@ -65,7 +65,7 @@
   <div ng-init="lunchMenu.getDrinksMenus()">
     <ul ng-repeat="menu in lunchMenu.getDrinksMenus">
       <li>
-        {{menu.title}}
+        <h5>{{menu.title}}</h5>
         {{menu.price}}
       </li>
       <li ng-repeat="men in menu.description">
