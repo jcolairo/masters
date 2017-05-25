@@ -8,8 +8,6 @@ var drinksMenu = require('../models/drinksMenu-model');
 
 // Action: index
 function indexName(req, res) {
-  // var x = new Name({first_name: "Niall", last_name: "Wallace"})
-  // x.save();
   Name.find({}, function (err, names) {
     if (err) {
       console.log('Could not get list of users:', err);
@@ -21,72 +19,60 @@ function indexName(req, res) {
     res.json(names);
   });
 }
-function indexSetLunchMenu(req, res) {
-  setLunchMenu.find({}, function (err, setLunchMenu) {
+function indexSetLunchMenus(req, res) {
+  setLunchMenu.find({}, function (err, setLunchMenus) {
     if (err) {
       console.log('Could not get list of users:', err);
-      // A little bit lazy, but not going to implement
-      // anything more complex at this point in time:
       res.status(500).send('Could not get list of users');
       return;
     }
-    res.json(setLunchMenu);
+    res.json(setLunchMenus);
   });
 }
-function indexFingerMenu(req, res) {
+function indexFingerMenus(req, res) {
   fingerMenu.find({}, function (err, fingerMenu) {
     if (err) {
       console.log('Could not get list of users:', err);
-      // A little bit lazy, but not going to implement
-      // anything more complex at this point in time:
       res.status(500).send('Could not get list of users');
       return;
     }
     res.json(fingerMenu);
   });
 }
-function indexcoldForkMenu(req, res) {
+function indexcoldForkMenus(req, res) {
   coldForkMenu.find({}, function (err, coldForkMenu) {
     if (err) {
       console.log('Could not get list of users:', err);
-      // A little bit lazy, but not going to implement
-      // anything more complex at this point in time:
       res.status(500).send('Could not get list of users');
       return;
     }
     res.json(coldForkMenu);
   });
 }
-function indexhotForkMenu(req, res) {
+function indexhotForkMenus(req, res) {
   hotForkMenu.find({}, function (err, hotFoodMenu) {
     if (err) {
       console.log('Could not get list of users:', err);
-      // A little bit lazy, but not going to implement
-      // anything more complex at this point in time:
       res.status(500).send('Could not get list of users');
       return;
     }
     res.json(hotFoodMenu);
   });
 }
-function indexplatterMenu(req, res) {
+function indexplatterMenus(req, res) {
   platterMenu.find({}, function (err, platterMenu) {
     if (err) {
       console.log('Could not get list of users:', err);
-      // A little bit lazy, but not going to implement
-      // anything more complex at this point in time:
       res.status(500).send('Could not get list of users');
       return;
     }
     res.json(platterMenu);
   });
 }
-function indexdrinksMenu(req, res) {
+function indexdrinksMenus(req, res) {
   drinksMenu.find({}, function (err, drinksMenu) {
     if (err) {
       console.log('Could not get list of users:', err);
-      // A little bit lazy, but not going to implement
-      // anything more complex at this point in time:
       res.status(500).send('Could not get list of users');
       return;
     }
@@ -96,10 +82,10 @@ function indexdrinksMenu(req, res) {
 
 module.exports = {
   index: indexName,
-  setLunchMenu: indexSetLunchMenu,
-  fingerMenu: indexFingerMenu,
-  coldForkMenu: indexcoldForkMenu,
-  hotForkMenu: indexhotForkMenu,
-  platterMenu: indexplatterMenu,
-  drinksMenu: indexdrinksMenu
+  setLunchMenus: indexSetLunchMenus,
+  fingerMenus: indexFingerMenus,
+  coldForkMenus: indexcoldForkMenus,
+  hotForkMenus: indexhotForkMenus,
+  platterMenus: indexplatterMenus,
+  drinksMenus: indexdrinksMenus
 };
