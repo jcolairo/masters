@@ -3,7 +3,43 @@ function LunchMenuFactory($http) {
     getAll: function() {
       return $http({
         method: 'GET',
-        url: ''
+        url: '/api/names'
+      });
+    },
+    getSetLunchMenus: function() {
+      return $http({
+        method: 'GET',
+        url: '/api/setLunchMenus'
+      });
+    },
+    getFingerMenus: function() {
+      return $http({
+        method: 'GET',
+        url: '/api/fingerMenu'
+      });
+    },
+    getColdForkMenus: function() {
+      return $http({
+        method: 'GET',
+        url: '/api/coldForkMenu'
+      });
+    },
+    getHotForkMenus: function() {
+      return $http({
+        method: 'GET',
+        url: '/api/hotForkMenu'
+      });
+    },
+    getPlatterMenus: function() {
+      return $http({
+        method: 'GET',
+        url: '/api/platterMenu'
+      });
+    },
+    getDrinksMenus: function() {
+      return $http({
+        method: 'GET',
+        url: '/api/drinksMenu'
       });
     }
   };

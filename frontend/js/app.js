@@ -67,6 +67,8 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
 }
 
+MainRouter.$inject = ['$stateProvider', '$urlRouterProvider'];
+
 angular
   .module('MastersApp', ['ui.router'])
   .config(MainRouter);
