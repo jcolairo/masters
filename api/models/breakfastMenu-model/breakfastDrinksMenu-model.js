@@ -11,10 +11,10 @@ var validationRules = {
     String
   ]
 };
-var breakfastSandwichesMenuSchema = new Schema(validationRules);
-var breakfastSandwichesMenu = mongoose.model('breakfastSandwichesMenu', breakfastSandwichesMenuSchema);
+var breakfastDrinksMenuSchema = new Schema(validationRules);
+var breakfastDrinksMenu = mongoose.model('breakfastDrinksMenu', breakfastDrinksMenuSchema);
 
 // var x = new Menu({title: "Niall's Menu", price: "1.99"})
 // x.save();
 
-module.exports = breakfastSandwichesMenu;
+module.exports = breakfastDrinksMenu;
