@@ -1,1 +1,17 @@
 <h1>About</h1>
+
+<section ng-controller="LunchMenuController as lunchMenu">
+  <div ng-init="lunchMenu.getSetLunchMenus()">
+    <ul ng-repeat="menu in lunchMenu.setLunchMenus" class="test">
+      <li class="test-padding">
+        <h5>{{menu.title}}</h5>
+      </li>
+      <li ng-repeat="men in menu.description" class="test-padding">
+        {{men}},
+      </li>
+      <li>
+        {{menu.price}}
+      </li>
+    </ul>
+  </div>
+</section>
