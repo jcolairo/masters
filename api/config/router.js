@@ -3,8 +3,6 @@ var router = express.Router();
 
 var lunchMenuController = require('../controllers/lunchMenu.controller');
 
-router.get('/api/names', lunchMenuController.index);
-
 router.get('/api/setLunchMenus', lunchMenuController.setLunchMenus);
 
 router.get('/api/fingerMenu', lunchMenuController.fingerMenus);

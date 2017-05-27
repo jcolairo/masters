@@ -1,24 +1,11 @@
-var Name = require('../models/name-model');
-var setLunchMenu = require('../models/setLunchMenu-model');
-var fingerMenu = require('../models/fingerMenu-model');
-var coldForkMenu = require('../models/coldForkMenu-model');
-var hotForkMenu = require('../models/hotForkMenu-model');
-var platterMenu = require('../models/platterMenu-model');
-var drinksMenu = require('../models/drinksMenu-model');
+var setLunchMenu = require('../models/lunchMenu-model/setLunchMenu-model');
+var fingerMenu = require('../models/lunchMenu-model/fingerMenu-model');
+var coldForkMenu = require('../models/lunchMenu-model/coldForkMenu-model');
+var hotForkMenu = require('../models/lunchMenu-model/hotForkMenu-model');
+var platterMenu = require('../models/lunchMenu-model/platterMenu-model');
+var drinksMenu = require('../models/lunchMenu-model/drinksMenu-model');
 
 // Action: index
-function indexName(req, res) {
-  Name.find({}, function (err, names) {
-    if (err) {
-      console.log('Could not get list of users:', err);
-      // A little bit lazy, but not going to implement
-      // anything more complex at this point in time:
-      res.status(500).send('Could not get list of users');
-      return;
-    }
-    res.json(names);
-  });
-}
 function indexSetLunchMenus(req, res) {
   setLunchMenu.find({}, function (err, setLunchMenus) {
     if (err) {
@@ -81,7 +68,6 @@ function indexdrinksMenus(req, res) {
 }
 
 module.exports = {
-  index: indexName,
   setLunchMenus: indexSetLunchMenus,
   fingerMenus: indexFingerMenus,
   coldForkMenus: indexcoldForkMenus,
