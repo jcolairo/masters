@@ -1,22 +1,23 @@
 <h1>Set Lunch Menu</h1>
 
-<section ng-controller="LunchMenuController as menu">
-  <ul ng-repeat="m in menu.setLunchMenuData" class="lunchMenu {{m.titleName}}">
-    <div class="row">
-      <div class="col s12 m10 offset-m1 l10 offset-l1">
-        <div class="lunchMenuDiv">
-          <div class="lunchMenuDivDiv">
-            <li>
-              <h4>{{m.title}}
-              {{m.price}}
-              + VAT</h4>
-            </li>
-            <li ng-repeat="men in m.description" class="text">
-              {{men}}
-            </li>
+<section ng-controller="LunchMenuController as lunchMenu">
+  <div ng-init="lunchMenu.getSetLunchMenus()">
+    <ul ng-repeat="menu in lunchMenu.setLunchMenus" class="lunchMenu {{menu.titleName}}">
+      <div class="row">
+        <div class="col s12 m10 offset-m1 l10 offset-l1">
+          <div class="lunchMenuDiv">
+            <div class="lunchMenuDivDiv">
+              <li>
+                <h4>{{menu.title}}
+                {{menu.price}} + VAT</h4>
+              </li>
+              <li ng-repeat="men in menu.description" class="text">
+                {{men}}
+              </li>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </ul>
+    </ul>
+  </div>
 </section>

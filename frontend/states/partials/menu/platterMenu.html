@@ -1,13 +1,13 @@
-<h1>getColdForkMenus</h1>
+<h1>getPlatterMenus</h1>
 <section ng-controller="LunchMenuController as lunchMenu">
-  <div ng-init="lunchMenu.getColdForkMenus()">
-    <ul ng-repeat="menu in lunchMenu.coldForkMenus" class="lunchMenu {{menu.titleName}}">
+  <div ng-init="lunchMenu.getPlatterMenus()">
+    <ul ng-repeat="menu in lunchMenu.getPlatterMenus" class="lunchMenu {{menu.titleName}}">
       <div class="row">
         <div class="col s12 m10 offset-m1 l10 offset-l1">
           <div class="lunchMenuDiv">
             <div class="lunchMenuDivDiv">
               <li>
-                <h5>{{menu.title}}</h5>
+                {{menu.title}}
                 {{menu.price}}
               </li>
               <li ng-repeat="men in menu.description">

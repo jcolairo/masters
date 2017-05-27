@@ -28,6 +28,34 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
       'main@setLunchMenu': {templateUrl: '/states/partials/menu/setLunchMenu.html'}
     }
   })
+  .state('coldForkMenu', {
+    url: '/coldForkMenu',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@coldForkMenu': {templateUrl: '/states/partials/menu/coldForkMenu.html'}
+    }
+  })
+  .state('hotForkMenu', {
+    url: '/hotForkMenu',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@hotForkMenu': {templateUrl: '/states/partials/menu/hotForkMenu.html'}
+    }
+  })
+  .state('platterMenu', {
+    url: '/platterMenu',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@platterMenu': {templateUrl: '/states/partials/menu/platterMenu.html'}
+    }
+  })
+  .state('drinksMenu', {
+    url: '/drinksMenu',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@drinksMenu': {templateUrl: '/states/partials/menu/drinksMenu.html'}
+    }
+  })
   .state('contact', {
     url: '/contact',
     views: {
