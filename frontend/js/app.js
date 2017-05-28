@@ -18,7 +18,14 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
     url: '/lunchMenu',
     views: {
       '': {templateUrl: '/states/template.html'},
-      'main@lunchMenuNav': {templateUrl: '/states/partials/menu//nav/lunchMenuNav.html'}
+      'main@lunchMenuNav': {templateUrl: '/states/partials/menu/nav/lunchMenuNav.html'}
+    }
+  })
+  .state('breakfastMenuNav', {
+    url: '/breakfastMenu',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@breakfastMenuNav': {templateUrl: '/states/partials/menu/nav/breakfastMenuNav.html'}
     }
   })
   .state('fingerMenu', {
@@ -63,6 +70,76 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
       'main@drinksMenu': {templateUrl: '/states/partials/menu/lunchMenu/drinksMenu.html'}
     }
   })
+  .state('croissantMenu', {
+    url: '/croissantMenu',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@croissantMenu': {templateUrl: '/states/partials/menu/breakfastMenu/croissantMenu.html'}
+    }
+  })
+  .state('muffinMenu', {
+    url: '/muffinMenu',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@muffinMenu': {templateUrl: '/states/partials/menu/breakfastMenu/muffinMenu.html'}
+    }
+  })
+  .state('danishMenu', {
+    url: '/danishMenu',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@danishMenu': {templateUrl: '/states/partials/menu/breakfastMenu/danishMenu.html'}
+    }
+  })
+  .state('donutMenu', {
+    url: '/donutMenu',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@donutMenu': {templateUrl: '/states/partials/menu/breakfastMenu/donutMenu.html'}
+    }
+  })
+  .state('breakfastBagelMenu', {
+    url: '/breakfastBagelMenu',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@breakfastBagelMenu': {templateUrl: '/states/partials/menu/breakfastMenu/breakfastBagelMenu.html'}
+    }
+  })
+  .state('breakfastRollsMenu', {
+    url: '/breakfastRollsMenu',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@breakfastRollsMenu': {templateUrl: '/states/partials/menu/breakfastMenu/breakfastRollsMenu.html'}
+    }
+  })
+  .state('breakfastSandwichesMenu', {
+    url: '/breakfastSandwichesMenu',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@breakfastSandwichesMenu': {templateUrl: '/states/partials/menu/breakfastMenu/breakfastSandwichesMenu.html'}
+    }
+  })
+  .state('breakfastBaguettesMenu', {
+    url: '/breakfastBaguettesMenu',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@breakfastBaguettesMenu': {templateUrl: '/states/partials/menu/breakfastMenu/breakfastBaguettesMenu.html'}
+    }
+  })
+  .state('fruitYoghurtMenu', {
+    url: '/fruitYoghurtMenu',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@fruitYoghurtMenu': {templateUrl: '/states/partials/menu/breakfastMenu/fruitYoghurtMenu.html'}
+    }
+  })
+  .state('breakfastDrinksMenu', {
+    url: '/breakfastDrinksMenu',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@breakfastDrinksMenu': {templateUrl: '/states/partials/menu/breakfastMenu/breakfastDrinksMenu.html'}
+    }
+  })
   .state('contact', {
     url: '/contact',
     views: {
@@ -75,27 +152,6 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
     views: {
       '': {templateUrl: '/states/template.html'},
       'main@about': {templateUrl: '/states/partials/about/about.html'}
-    }
-  })
-  .state('portfolio-connect4', {
-    url: '/portfolio/connect4',
-    views: {
-      '': {templateUrl: '/states/template.html'},
-      'main@portfolio-connect4': {templateUrl: '/states/partials/portfolio/connect4.html'}
-    }
-  })
-  .state('portfolio-movies', {
-    url: '/portfolio/movies',
-    views: {
-      '': {templateUrl: '/states/template.html'},
-      'main@portfolio-movies': {templateUrl: '/states/partials/portfolio/movies.html'}
-    }
-  })
-  .state('portfolio-police', {
-    url: '/portfolio/police',
-    views: {
-      '': {templateUrl: '/states/template.html'},
-      'main@portfolio-police': {templateUrl: '/states/partials/portfolio/police.html'}
     }
   });
 

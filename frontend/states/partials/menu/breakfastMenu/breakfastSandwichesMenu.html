@@ -1,0 +1,14 @@
+<h1>Breakfast Sandwiches Menu</h1>
+
+<section ng-controller="BreakfastMenuController as breakfastMenu">
+  <div ng-init="breakfastMenu.getBreakfastSandwichesMenus()">
+    <ul ng-repeat="menu in breakfastMenu.breakfastSandwichesMenus">
+      <li>
+        <h5>{{menu.title}} {{menu.price}} + VAT</h5>
+      </li>
+      <li ng-repeat="men in menu.description">
+        {{men}}
+      </li>
+    </ul>
+  </div>
+</section>

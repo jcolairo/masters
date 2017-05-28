@@ -9,7 +9,7 @@ function LunchMenuFactory($http) {
     getSetLunchMenus: function() {
       return $http({
         method: 'GET',
-        url: '/api/setLunchMenus'
+        url: '/api/setLunchMenu'
       });
     },
     getFingerMenus: function() {
