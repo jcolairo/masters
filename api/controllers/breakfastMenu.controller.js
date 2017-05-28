@@ -6,8 +6,8 @@ var bagelMenu = require('../models/breakfastMenu-model/bagel-model');
 var breakfastRollsMenu = require('../models/breakfastMenu-model/breakfastRolls-model');
 var breakfastSandwichesMenu = require('../models/breakfastMenu-model/breakfastSandwiches-model');
 var breakfastBaguettesMenu = require('../models/breakfastMenu-model/breakfastBaguette-model');
-var fruitYoghurtMenu = require('../models/breakfastMenu-model/fruitYoghurtMenu-model');
-var breakfastDrinksMenu = require('../models/breakfastMenu-model/breakfastDrinksMenu-model');
+var fruitYoghurtMenu = require('../models/breakfastMenu-model/fruitYoghurt-model');
+var breakfastDrinksMenu = require('../models/breakfastMenu-model/breakfastDrinks-model');
 
 function indexCroissantMenus(req, res) {
   croissantMenu.find({}, function (err, criossantMenus) {
