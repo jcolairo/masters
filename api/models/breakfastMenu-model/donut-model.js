@@ -15,9 +15,3 @@ var donutMenu = mongoose.model('donutMenu', donutMenuSchema);
 // x.save();
 
 module.exports = donutMenu;
-
-var x = new donutMenu({
-  title: 'Large Donut',
-  price: '£2.00'
-});
-x.save();

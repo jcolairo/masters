@@ -77,32 +77,39 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
       'main@croissantMenu': {templateUrl: '/states/partials/menu/breakfastMenu/croissantMenu.html'}
     }
   })
-  .state('muffinsMenu', {
-    url: '/muffinsMenu',
+  .state('muffinMenu', {
+    url: '/muffinMenu',
     views: {
       '': {templateUrl: '/states/template.html'},
-      'main@muffinsMenu': {templateUrl: '/states/partials/menu/breakfastMenu/muffinsMenu.html'}
+      'main@muffinMenu': {templateUrl: '/states/partials/menu/breakfastMenu/muffinMenu.html'}
     }
   })
-  .state('danishesMenu', {
-    url: '/danishesMenu',
+  .state('danishMenu', {
+    url: '/danishMenu',
     views: {
       '': {templateUrl: '/states/template.html'},
-      'main@danishesMenu': {templateUrl: '/states/partials/menu/breakfastMenu/danishesMenu.html'}
+      'main@danishMenu': {templateUrl: '/states/partials/menu/breakfastMenu/danishMenu.html'}
     }
   })
-  .state('donutsMenu', {
-    url: '/donutsMenu',
+  .state('donutMenu', {
+    url: '/donutMenu',
     views: {
       '': {templateUrl: '/states/template.html'},
-      'main@donutsMenu': {templateUrl: '/states/partials/menu/breakfastMenu/donutsMenu.html'}
+      'main@donutMenu': {templateUrl: '/states/partials/menu/breakfastMenu/donutMenu.html'}
     }
   })
-  .state('breakfastBagelsMenu', {
-    url: '/breakfastBagelsMenu',
+  .state('breakfastBagelMenu', {
+    url: '/breakfastBagelMenu',
     views: {
       '': {templateUrl: '/states/template.html'},
-      'main@breakfastBagelsMenu': {templateUrl: '/states/partials/menu/breakfastMenu/breakfastBagelsMenu.html'}
+      'main@breakfastBagelMenu': {templateUrl: '/states/partials/menu/breakfastMenu/breakfastBagelMenu.html'}
+    }
+  })
+  .state('breakfastRollsMenu', {
+    url: '/breakfastRollsMenu',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@breakfastRollsMenu': {templateUrl: '/states/partials/menu/breakfastMenu/breakfastRollsMenu.html'}
     }
   })
   .state('breakfastSandwichesMenu', {
