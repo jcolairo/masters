@@ -145,6 +145,14 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
     views: {
       '': {templateUrl: '/states/template.html'},
       'main@contact': {templateUrl: '/states/partials/contact/contact.html'}
+    },
+    resolve: {
+      currentAuth: [
+        'AuthFactory',
+        function (AuthFactory) {
+          return AuthFactory.$requireSignIn();
+        }
+      ]
     }
   })
   .state('about', {
@@ -152,6 +160,35 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
     views: {
       '': {templateUrl: '/states/template.html'},
       'main@about': {templateUrl: '/states/partials/about/about.html'}
+    },
+    resolve: {
+      currentAuth: [
+        'AuthFactory',
+        function (AuthFactory) {
+          return AuthFactory.$requireSignIn();
+        }
+      ]
+    }
+  })
+  .state('auth-required', {
+    url: '/auth-required',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@auth-required': {templateUrl: '/states/partials/auth/auth-required.html'}
+    }
+  })
+  .state('login', {
+    url: '/login',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@login': {templateUrl: '/states/partials/auth/login.html'}
+    }
+  })
+  .state('signup', {
+    url: '/signup',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@signup': {templateUrl: '/states/partials/auth/signup.html'}
     }
   });
 
@@ -160,6 +197,16 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
 
 MainRouter.$inject = ['$stateProvider', '$urlRouterProvider'];
 
+function AuthCatcher($rootScope, $state) {
+  $rootScope.$on('$stateChangeError', (event, toState, toParams, fromState, fromParams, error) => {
+    if (error === 'AUTH_REQUIRED') {
+      $state.go('auth-required');
+    }
+  });
+}
+AuthCatcher.$inject = ['$rootScope', '$state'];
+
 angular
-  .module('MastersApp', ['ui.router'])
-  .config(MainRouter);
+  .module('MastersApp', ['ui.router', 'firebase'])
+  .config(MainRouter)
+  .run(AuthCatcher);

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
+  <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+
    <!-- <link rel="stylesheet"
 
     href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css"> -->
@@ -30,15 +32,20 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
 
   <script src="js/app.js"></script>
+
   <script src="js/controllers/lunchMenu.controller.js"></script>
   <script src="js/controllers/breakfastMenu.controller.js"></script>
+  <script src="js/controllers/auth.controller.js"></script>
 
   <script src="js/factories/lunchMenu.factory.js"></script>
   <script src="js/factories/breakfastMenu.factory.js"></script>
+  <script src="js/factories/auth.factory.js"></script>
 
   <link type="text/css" rel="stylesheet" href="css/home-styles.css" />
   <link type="text/css" rel="stylesheet" href="css/lunch-style.css" />
   <link type="text/css" rel="stylesheet" href="css/menu-style.css" />
+
+  <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
   <title>James Colairo</title>
 </head>
@@ -53,6 +60,9 @@
         <li data-xcoord="160px" ui-sref="menu"><a>Menu</a></li>
         <li data-xcoord="320px" ui-sref="about"><a>About</a></li>
         <li data-xcoord="480px" ui-sref="contact"><a>Contact</a></li>
+        <li data-xcoord="640px" ui-sref="login"><a>Login</a></li>
+        <li data-xcoord="800px" ui-sref="signup"><a>Sign Up</a></li>
+
       </ul>
     </nav>
   </section>
