@@ -47,7 +47,7 @@
 
   <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
 
-  <title>James Colairo</title>
+  <title>Masters</title>
 </head>
 <body>
 
@@ -55,13 +55,15 @@
   <section>
     <nav>
       <div></div>
-      <ul>
+      <ul ng-controller="AuthController as auth">
         <li data-xcoord="0px" ui-sref="home"><a>Home</a></li>
         <li data-xcoord="160px" ui-sref="menu"><a>Menu</a></li>
         <li data-xcoord="320px" ui-sref="about"><a>About</a></li>
         <li data-xcoord="480px" ui-sref="contact"><a>Contact</a></li>
         <li data-xcoord="640px" ui-sref="login"><a>Login</a></li>
         <li data-xcoord="800px" ui-sref="signup"><a>Sign Up</a></li>
+        <li data-xcoord="960px" ui-sref="home" ng-click="auth.signOut()"><a>Sign Out</a></li>
+
 
       </ul>
     </nav>
