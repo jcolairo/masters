@@ -14,6 +14,13 @@ function MainRouter ($stateProvider, $urlRouterProvider) {
       'main@menu': {templateUrl: '/states/partials/menu/menu.html'}
     }
   })
+  .state('order', {
+    url: '/order',
+    views: {
+      '': {templateUrl: '/states/template.html'},
+      'main@order': {templateUrl: '/states/partials/order/order.html'}
+    }
+  })
   .state('lunchMenuNav', {
     url: '/lunchMenu',
     views: {

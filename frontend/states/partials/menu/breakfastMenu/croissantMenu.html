@@ -10,7 +10,16 @@
         {{men}}
       </li>
       <li>
-        <button type="button" name="button">add</button>
+        {{menu._id}}
+      </li>
+      <li ng-controller="OrderController as order">
+        <div ng-if="order.isOrderVisible() === false">
+          <input type="submit" value="Add to basket" ng-click="order.toggleOrder()">
+        </div>
+        <div ng-if="order.isOrderVisible()" ng-click="order.getFood()">
+          <input type="submit" value="Add to basket second" ng-click="order.toggleOrder()">
+          <input type="number" ng-click="order.getFood()">
+        </div>
       </li>
     </ul>
   </div>
